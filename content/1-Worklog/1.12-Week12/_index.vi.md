@@ -1,58 +1,31 @@
 ---
-title: "Worklog Tuần 12"
+title: "Nhật ký Tuần 12"
 date: 2024-01-01
-weight: 2
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Kế hoạch chốt chặng Tuần 12:
 
-### Mục tiêu tuần 12:
+* Thiết lập hệ thống đo lường hiệu năng, bắt lỗi tập trung bằng CloudWatch và thông báo SNS.
+* Chạy End-to-End Test toàn hệ thống để giả lập các đoạn kịch bản tai nạn hỏng hóc thực tiễn.
+* Thu thập, biên soạn tài liệu nghiệm thu cuối cùng dọn đường cho việc lấy giấy chứng nhận Tốt nghiệp.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 12:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+### Hạng mục cuối khóa:
+| Ngày | Mô tả kết việc | Bắt đầu | Kết thúc | Nguồn tham chiếu |
+| --- | --- | :---: | :---: | --- |
+| 78 | Trỏ log của các khối Lambda chạy ngầm về một nơi duy nhất trên Amazon CloudWatch Logs để dễ tra cứu. | 03/07/2026 | 03/07/2026 |  |
+| 79 | Cài đặt bẫy CloudWatch Alarm chuyên săn đón các xung đột bất thường (chẳng hạn nhiệt độ máy xe đột biến). | 04/07/2026 | 04/07/2026 |  |
+| 80 | Bật dịch vụ SNS, gắn liền vào Alarm để hễ thông số xe chạm mốc là email khẩn bật ngay lập tức. | 05/07/2026 | 05/07/2026 |  |
+| 81 | Bật xe ảo chạy quá đà (105 độ C) để test thử độ nhạy của phản ứng hệ thống (E2E), xem AI có gọi email thành công không. | 06/07/2026 | 06/07/2026 |  |
+| 82 | Quét lại cơ chế cấp quyền IAM Role lần chót, rà soát dứt điểm các lỗi CORS còn sót trên nền API Gateway. | 07/07/2026 | 07/07/2026 |  |
+| 83 | Cú chót: Xác nhận nộp bộ báo cáo Khóa luận tốt nghiệp đồ sộ cùng nguyên bộ source code hoàn chỉnh. | 08/07/2026 | 08/07/2026 |  |
+| 84 | Hậu cần: Rà soát quét sạch các Cluster, Database không dùng đến để bảo tồn chi phí thẻ tín dụng. | 09/07/2026 | 09/07/2026 |  |
 
 
+### Trái ngọt sau 12 Tuần:
+
+* Hệ sinh thái kiểm soát tập trung đã hình thành rõ nét: thấy lỗi xe là bắn thông báo ngay không trễ nhịp.
+* Hệ thống vượt qua bài Test E2E khắc nghiệt, chứng tỏ luồng tưới máu Data từ phần cứng đến AI thực thi hoàn hảo.
+* Source Code bàn giao sạch đẹp với tiêu chuẩn phân quyền tối thiểu nghiêm ngặt.
+* Đạt được cột mốc Tốt nghiệp đúng hạn đợt 08/07/2026 và hạ bệ các tài nguyên dư thừa.

@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 3"
+date: 2026-05-01
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu then chốt Tuần 3:
+
+* Kiến tạo mạng lưới máy chủ đám mây độc lập bên trong nền tảng AWS bằng Amazon VPC.
+* Chia tách không gian mạng thành các phân khu Subnet và điều hướng luồng dữ liệu bằng Route Table.
+* Dựng rào chắn an ninh đa lớp ngăn chặn gói tin độc hại với quyền lực của Security Group và NACL.
+
+### Nhật trình triển khai:
+| Ngày | Mô tả công việc đã làm | Bắt đầu | Kết thúc | Nguồn tài liệu |
+| --- | --- | :---: | :---: | --- |
+| 15 | Phân tích lõi kiến trúc của Amazon VPC, học cách tính toán và chia dải địa chỉ IP theo chuẩn CIDR. | 01/05/2026 | 01/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 16 | Phân biệt cấu trúc bảo vệ Stateful của Security Group và quy cách xét duyệt Stateless chặt chẽ của NACL. | 02/05/2026 | 02/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 17 | Nghiên cứu các phương pháp liên kết mạng tiên tiến như Load Balancer, kết nối VPN hay kênh truyền AWS Direct Connect. | 03/05/2026 | 03/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 18 | Thực thi tạo VPC trống, xẻ nhỏ không gian IP để cấp phát cho hai vùng mạng Public và mạng Private. | 04/05/2026 | 04/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 19 | Mount thiết bị Internet Gateway (IGW) vào mạng và cấu hình băng thông ra ngoài cho hệ thống máy chủ Public. | 05/05/2026 | 05/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 20 | Khởi động NAT Gateway đứng tại Public Subnet nhằm hỗ trợ Private Subnet có thể lấy dữ liệu ẩn danh từ Internet. | 06/05/2026 | 06/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 21 | Lắp đặt các quy tắc chống xâm nhập trên tường lửa Security Group và Network ACL để chặn/mở cổng dịch vụ theo ý muốn. | 07/05/2026 | 07/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 3:
+### Đúc kết giá trị:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Tự tay xây dựng được môi trường mạng riêng VPC tuân thủ nguyên tắc cách ly bảo mật không gian.
+* Vạch trần đường đi của Dữ liệu thông qua các thành phần định tuyến như Route Table, IGW và NAT Gateway.
+* Làm chủ sức mạnh phân quyền truy cập thông qua sự kết hợp linh hoạt giữa Security Group và NACL.

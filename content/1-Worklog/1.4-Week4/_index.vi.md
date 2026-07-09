@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 4"
+date: 2026-05-08
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu lớn trong Tuần 4:
+
+* Thực thi tạo lập các hệ thống Amazon EC2 ảo hóa và làm chủ quy trình kết nối shell từ xa hợp lệ.
+* Giao tiếp và định tuyến tên miền nội bộ cũng như công cộng qua cơ sở hạ tầng Amazon Route 53.
+* Nắm bắt mô hình Infrastructure as Code (IaC) để gom nhóm tài nguyên bằng mã kịch bản AWS CloudFormation.
+
+### Nội dung các phiên làm việc:
+| Ngày | Bảng kê đầu việc thực tế | Bắt đầu | Kết thúc | Nguồn tham chiếu |
+| --- | --- | :---: | :---: | --- |
+| 22 | Cấu hình và gọi khởi chạy một EC2 instance chạy nhân Linux nằm lọt trong phân lớp mạng cục bộ. | 08/05/2026 | 08/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 23 | Xử lý giao thức SSH để chui vào bên trong máy chủ (sử dụng cặp khóa Key Pair và Endpoint hỗ trợ kết nối bảo mật). | 09/05/2026 | 09/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 24 | Mổ xẻ nguyên lý Amazon Route 53 để hiểu cách dịch vụ này phân phối lưu lượng và biên dịch tên miền (DNS). | 10/05/2026 | 10/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 25 | Nghiên cứu tài liệu chính thống về IaC, tìm hiểu cách AWS CloudFormation biến toàn bộ các cú pháp cấu hình thành nút mạng thực. | 11/05/2026 | 11/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 26 | Set up Route 53 Resolver Rule nhằm trỏ traffic truy vấn (query) qua lại một cách logic và thông suốt. | 12/05/2026 | 12/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 27 | Tự tay biên dịch một tệp tin CloudFormation (Template) dạng mẫu để ra lệnh cho AWS dựng máy chủ tự động mà không cần click tay. | 13/05/2026 | 13/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 28 | Fix bug, kiểm soát log khi SSH chập chờn, dọn dẹp môi trường Route 53 để hoàn tất cụm bài học Module 02. | 14/05/2026 | 14/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 4:
+### Hiệu quả thu được:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 4:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn toàn tự tin cấp phát và vận hành máy chủ EC2 trực tuyến với cấp độ mã hóa truy cập sâu.
+* Khai thác trơn tru tuyến mạng DNS liên tục nhờ bảng cấu hình của Amazon Route 53.
+* Loại bỏ thao tác thủ công, ứng dụng lập trình hạ tầng CloudFormation Template để triển khai đồng loạt.

@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 8"
+date: 2026-06-05
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu tiêu điểm Tuần 8:
+
+* Xâm nhập vào thế giới của giao thức MQTT hạng nhẹ và giải pháp kết nối cảm biến AWS IoT Core.
+* Quản trị rủi ro hệ thống bằng thiết lập log vận hành và cảnh báo thời gian thực trên CloudWatch.
+* Đúc kết toàn bộ hành trình Training Bootcamp FCAJ và nhắm nguồn lực tiến tới Đồ án Tốt nghiệp.
+
+### Lịch làm việc trong tuần:
+| Ngày | Trọng tâm công việc | Bắt đầu | Kết thúc | Nguồn tham khảo |
+| --- | --- | :---: | :---: | --- |
+| 50 | Đi sâu vào phương thức đăng ký thiết bị vào IoT Core, đánh giá hiệu năng chuyển phát dữ liệu MQTT. | 05/06/2026 | 05/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 51 | Nắm thóp cơ chế bảo mật kết nối phần cứng thông qua chứng nhận X.509 và kỹ thuật phân quyền IoT Policy. | 06/06/2026 | 06/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 52 | Lắp ráp các Rule chạy trên AWS IoT nhằm tách dữ liệu từ luồng tín hiệu và luân chuyển tiếp vào Lambda. | 07/06/2026 | 07/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 53 | Trải nghiệm toàn tập Amazon CloudWatch: xuất log ứng dụng, thu gom các số liệu Metric để giám sát. | 08/06/2026 | 08/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 54 | Lập trình các mốc báo động (Alarms) trên CloudWatch để móc nối gọi API gửi email khẩn cấp qua bên SNS. | 09/06/2026 | 09/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 55 | Tập trung cô đọng và biên soạn lại bản ghi chép khổng lồ toàn bộ kiến thức kỹ thuật cloud đã tích luỹ. | 10/06/2026 | 10/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 56 | Bắt tay tiếp nhận chính thức tên chuyên đề Capstone: Xây dựng trung tâm điều hành xe tự lái AutoRx bằng IoT. | 11/06/2026 | 11/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 8:
+### Thành quả chốt hạ:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 8:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Đóng lại chương trình đào tạo FCAJ Bootcamp một cách xuất sắc với sự tự tin kiểm soát hoàn toàn hệ thống.
+* Vận dụng thành thục kênh truyền tin MQTT tốc độ cao được bảo chứng tuyệt đối bởi IoT Core.
+* Tự động hóa khâu giám sát tài nguyên mà không cần trực page, nhờ chức năng cảnh báo chéo giữa CloudWatch và SNS.
+* Sẵn sàng chuyển mình sang giai đoạn nghiên cứu phát triển độc lập dự án cuối khóa.

@@ -1,57 +1,31 @@
 ---
 title: "Week 12 Worklog"
 date: 2024-01-01
-weight: 2
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+### Final Requirements for Week 12:
+
+* Implement sweeping observability measures over the architecture via CloudWatch logs and SNS notices.
+* Stress-test the solution holistically with End-to-End simulations simulating car engine failures.
+* Summarize the entire journey, document the codebase, and submit the concluding Bootcamp report.
+
+### Schedule of Closure:
+| Day | Concluding Task | Start Date | Completion Date | Reference Link |
+| --- | --- | :---: | :---: | --- |
+| 78 | Directed all Lambda backend logs to automatically stream into Amazon CloudWatch Log Groups. | 03/07/2026 | 03/07/2026 |  |
+| 79 | Calibrated CloudWatch alarms precisely to fire whenever critical boundaries (e.g. Engine Overheat) are breached. | 04/07/2026 | 04/07/2026 |  |
+| 80 | Spun up a target Amazon SNS Topic mapped to the alarm, capable of dispatching immediate administrative emails. | 05/07/2026 | 05/07/2026 |  |
+| 81 | Simulated dangerous engine temperatures over 105°C to watch the E2E flow succeed and the AI respond via email. | 06/07/2026 | 06/07/2026 |  |
+| 82 | Reviewed cross-origin restrictions on API Gateway and finalized a rigorous sweep of all IAM permission policies. | 07/07/2026 | 07/07/2026 |  |
+| 83 | Turned in the finalized Capstone Project documentation alongside the compiled codebase repository. | 08/07/2026 | 08/07/2026 |  |
+| 84 | Tore down all unneeded AWS experiment elements to eliminate accidental post-graduation cloud billing. | 09/07/2026 | 09/07/2026 |  |
 
 
-### Week 12 Objectives:
+### Final Achievements:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
-
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Week 12 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Assured system reliability through real-time operational dashboarding and instant email alerts.
+* Passed exhaustive E2E functional checks, validating the latency and accuracy of the AI responses under load.
+* Delivered a professionally documented repository, demonstrating robust cloud security practices.
+* Formally concluded the internship on July 8, 2026, marking the beginning of my cloud computing career.

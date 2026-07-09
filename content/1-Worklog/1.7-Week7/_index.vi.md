@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 7"
+date: 2026-05-29
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu lớn của Tuần 7:
+
+* Quản trị kho lưu trữ tài nguyên tĩnh với dung lượng vô hạn thông qua Amazon S3.
+* Biến S3 Bucket thành một máy chủ web thực thụ nhờ tính năng Static Website Hosting.
+* Tích hợp mạng lưới phân phối nội dung toàn cầu Amazon CloudFront để bứt phá tốc độ tải trang.
+
+### Chi tiết lộ trình:
+| Ngày | Bảng kê hoạt động | Bắt đầu | Kết thúc | Nguồn học tập |
+| --- | --- | :---: | :---: | --- |
+| 43 | So sánh chi tiết từng hạng mục lưu trữ (Storage Class) của S3 nhằm định ra chiến lược lưu trữ tiết kiệm. | 29/05/2026 | 29/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 44 | Lập trình sẵn S3 Bucket mới với chế độ Public Access Block bật 100% để loại trừ nguy cơ rò rỉ dữ liệu. | 30/05/2026 | 30/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 45 | Bật công tắc Static Website Hosting, đẩy toàn bộ source code giao diện tĩnh lên bucket. | 31/05/2026 | 31/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 46 | Xử lý triệt để lỗi Cross-Origin bằng file cấu hình CORS và thiết lập S3 Bucket Policy tương thích. | 01/06/2026 | 01/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 47 | Khởi chạy Amazon CloudFront Distribution trỏ trực tiếp về nguồn dữ liệu tĩnh vừa dựng tại S3. | 02/06/2026 | 02/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 48 | Chặn đường vào cửa sau của S3 bằng Origin Access Control (OAC), ép người dùng chỉ được gọi qua CDN. | 03/06/2026 | 03/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 49 | Chạy tool kiểm tra hiệu suất truy cập đầu cuối của CloudFront, sau đó thực hiện clean-up gọn gàng. | 04/06/2026 | 04/06/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 7:
+### Thành tích ghi nhận:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 7:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Tổ chức thành công kho dữ liệu an toàn tuyệt đối với chuẩn bảo mật khép kín từ Amazon S3.
+* Hệ thống Frontend được tăng tốc truy xuất, sẵn sàng đón tải cao mà không sập nhờ CloudFront.
+* Có kinh nghiệm sâu sắc trong việc tùy biến chính sách vùng cấm (CORS, OAC) cho các tệp tin lưu trữ chia sẻ.

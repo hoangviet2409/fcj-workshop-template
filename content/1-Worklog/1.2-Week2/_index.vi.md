@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 2"
+date: 2026-04-24
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu cốt lõi của Tuần 2:
+
+* Nắm bắt nguyên lý cấp quyền và quản lý tài khoản người dùng trực thuộc dịch vụ AWS IAM.
+* Xây dựng rào chắn bảo mật cấp cao nhất cho tài khoản gốc (Root account).
+* Đưa vào sử dụng tính năng giám sát AWS Budgets nhằm bảo đảm chi tiêu không vượt quá hạn mức khi làm Lab.
+
+### Tiến độ công việc đã triển khai:
+| Ngày | Mô tả công việc chi tiết | Bắt đầu | Kết thúc | Nguồn tài liệu |
+| --- | --- | :---: | :---: | --- |
+| 8 | Thiết lập một tài khoản AWS mới và cấu hình sơ bộ những tính năng an toàn cơ bản nhất. | 24/04/2026 | 24/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 9 | Ràng buộc tài khoản Root bằng tính năng Xác minh bước hai (MFA). | 25/04/2026 | 25/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 10 | Làm quen với bảng điều khiển IAM: thử nghiệm lập mới User, tập hợp vào các Group và phân phối quyền hạn. | 26/04/2026 | 26/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 11 | Ủy thác quyền Quản trị viên (Administrator Access) cho tài khoản IAM User sẽ dùng chính để chạy hệ thống. | 27/04/2026 | 27/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 12 | Thao tác trên giao diện AWS Budgets, thiết lập ngưỡng cước phí để nhận email thông báo khi vượt mức. | 28/04/2026 | 28/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 13 | Đào sâu vào các loại Budget phức tạp hơn như Usage Budget hay dự khoản Savings Plans. | 29/04/2026 | 29/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 14 | Xem qua cơ chế hoạt động của trung tâm hỗ trợ AWS (Support Center) và học cách hủy/xóa các tài nguyên đã khởi tạo để tránh hao tổn. | 30/04/2026 | 30/04/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 2:
+### Thành quả thu nhận:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 2:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Root account đã được đóng băng an toàn trước các rủi ro bằng cơ chế mã xác nhận linh động MFA.
+* Củng cố kiến thức điều phối linh hoạt các tập luật (Policy) trong IAM cho User và Group.
+* Tránh được rủi ro tài chính phát sinh ngoài ý muốn nhờ cài cắm thành công AWS Budgets tự động cảnh báo.

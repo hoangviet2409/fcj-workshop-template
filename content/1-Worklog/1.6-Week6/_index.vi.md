@@ -1,58 +1,30 @@
 ---
-title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 6"
+date: 2026-05-22
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu hướng tới ở Tuần 6:
+
+* Thâm nhập sâu hơn vào kiến thức về không gian lưu trữ của EC2 và các phương pháp Auto Scaling.
+* Tìm hiểu quy định phân định ranh giới bảo mật của AWS qua mô hình Shared Responsibility.
+* Ứng dụng nền tảng Amazon Cognito cấp quyền người dùng và ghi nhật ký giám sát hoạt động.
+
+### Tiến trình thực tiễn:
+| Ngày | Hạng mục thực hành/lý thuyết | Bắt đầu | Kết thúc | Nguồn học liệu |
+| --- | --- | :---: | :---: | --- |
+| 36 | Mở rộng khái niệm Amazon Machine Image (AMI) và kết hợp với AWS Backup để lên lịch sao lưu Snapshot định kỳ. | 22/05/2026 | 22/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 37 | Đối chiếu hai trường phái lưu trữ dành cho server: Ổ cứng mạng Amazon EBS và ổ đĩa phù du cục bộ Instance Store. | 23/05/2026 | 23/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 38 | Đánh giá tính năng ổ đĩa chia sẻ Amazon EFS và cấu hình luật co giãn (Auto Scaling Group) dựa trên tải của EC2. | 24/05/2026 | 24/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 39 | Nhận diện rõ trách nhiệm bảo an của nhà cung cấp và của khách hàng thông qua mô hình Shared Responsibility. | 25/05/2026 | 25/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 40 | Đăng ký Amazon Cognito làm trung tâm nhận diện người dùng, thử nghiệm đăng nhập phát sinh JWT. | 26/05/2026 | 26/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 41 | Bật công cụ kiểm tra rủi ro mã lệnh AWS Security Hub và kích hoạt theo dõi thao tác người dùng bằng AWS CloudTrail. | 27/05/2026 | 27/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 42 | Chỉnh sửa IAM Role chuẩn chỉnh để đảm bảo mã Lambda có đủ quyền tương tác riêng tư với SQS hoặc DynamoDB. | 28/05/2026 | 28/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 6:
+### Thành tích đạt được:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Ra quyết định quy hoạch khả năng lưu trữ (EBS/EFS) kết hợp cùng độ linh hoạt của Auto Scaling Group một cách dứt khoát.
+* Minh bạch được bổn phận bảo vệ hạ tầng vật lý của hệ thống AWS và bổn phận bảo mật dữ liệu khách hàng.
+* Gắn kết vững chắc bước xác thực qua Cognito và luôn lưu vết lại nhật ký dịch vụ nhờ CloudTrail liên tục quét.

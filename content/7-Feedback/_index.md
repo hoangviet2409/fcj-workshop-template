@@ -1,47 +1,67 @@
 ---
-title: "Sharing and Feedback"
-date: 2024-01-01
+title: "Sharing & Feedback"
+date: 2026-07-06
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+As the curtain falls on my internship with **First Cloud AI Journey (FCAJ)** — from **April 17, 2026** to **July 10, 2026** — I feel compelled to put into words the experience I've had and offer some thoughts that could benefit those who follow this path.
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+### General Impressions
 
-### Overall Evaluation
+**1. Learning Atmosphere & Community Spirit**
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+What immediately stood out to me at FCAJ is how genuinely flat the social dynamic is. There's no intimidating distance between senior engineers and beginners — everyone engages with one another openly and encouragingly. Events like the monthly Meetups and Community Days captured this spirit perfectly: they strike a rare balance between professional depth and warm camaraderie, making it easy to stay motivated on the Cloud learning journey.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**2. Support from the Organizing Team & Mentor**
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+The administrative side of FCAJ was consistently hands-on and responsive. **Nguyen Hoang Long** and **Thinh Nguyen** in particular made a noticeable difference — guiding interns through procedures, unblocking technical sticking points, and making sure everyone could participate meaningfully in program activities.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+On the mentorship front, working alongside **Nguyen Gia Hung** gave me steady, thoughtful direction throughout the twelve-week period. Beyond one-on-one mentorship, the guest speakers at community gatherings were exceptional — sharing not only hard technical knowledge but also practical wisdom about navigating a Cloud career.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**3. Relevance to IT Studies**
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+The curriculum — centered around AWS Cloud, Serverless design, AI/ML concepts, and DevOps practices — maps exceptionally well to what IT students need to thrive in today's job market. Working on the **AutoRx** project was where this relevance became tangible: instead of reading about cloud systems, I was actually architecting Lambda functions, configuring API Gateway, and monitoring live deployments on AWS.
 
----
+**4. Breadth of Skill Development**
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+FCAJ nurtures both technical and interpersonal growth simultaneously. While I strengthened my AWS technical depth and explored Prompt Engineering and the BMAD methodology, I also made notable strides in writing technical documentation, structuring presentations, and cultivating a Builder mindset. It's a level of breadth that's genuinely hard to find in conventional internship programs.
+
+**5. A Culture of Psychological Safety**
+
+The open culture at FCAJ sets it apart from most academic settings. Diverse viewpoints are encouraged, questions are always welcomed, and interns are actively invited to take the floor. This environment helped me break through the hesitation I often felt in more formal settings and gave me the confidence to express ideas freely.
+
+**6. Flexibility & Operating Conditions**
+
+The program's flexible scheduling was a real lifeline for managing concurrent university commitments. Add to that the opportunity to physically attend Community Days and Meetup events — something most remote internships simply cannot replicate — and it's clear this program invests genuinely in the intern experience.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### Most Memorable Achievement
+
+The highlight of this internship was unquestionably the chance to **own the full lifecycle of a Cloud product**. Moving from whiteboard design through to writing backend logic, wiring up API integrations, and watching the system run live on AWS taught me things no textbook could.
+
+Equally memorable were the candid conversations with practitioners like **Nguyen Duy Khang** (Solutions Architect) and **Nguyen Tuan Thinh** (DevOps/Cloud Engineer), whose stories helped me build a much clearer picture of what a Cloud career actually looks like day-to-day.
+
+---
+
+### Suggestions for Future Improvement
+
+- **Add more guided hands-on lab sessions:** The expert talks are excellent; pairing them with live AWS Console exercises would give beginners a much faster ramp-up on technical details.
+- **Publish a clearer milestone roadmap:** A documented timeline with weekly or monthly objectives would help interns self-track and stay ahead of deliverables more consistently.
+- **Create topic-based peer clusters:** Forming smaller communities around focused themes (DevOps, AI/ML, Backend, etc.) would deepen the bonds between interns and accelerate knowledge transfer within the group.
+
+---
+
+### Would I Recommend This Program?
+
+**Absolutely.** FCAJ is more than an internship — it's an ecosystem. If you care about Cloud or AI and want a place that will genuinely build both your skills and your professional network, this is worth every investment of your time.
+
+---
+
+### Closing Words & Hopes
+
+- I sincerely hope the Community Day cadence remains a permanent fixture — it's the cornerstone of everything that makes FCAJ's culture special.
+- Opening up demo sessions where interns can showcase their completed projects to a broader audience would add a meaningful dimension to the capstone experience.
+- Continuing to bring in guest voices from adjacent industries — FinTech, EdTech, Gaming — would paint a richer picture of Cloud's real-world reach across different business contexts.

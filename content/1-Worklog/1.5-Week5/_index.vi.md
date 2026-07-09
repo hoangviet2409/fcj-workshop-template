@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký Tuần 5"
+date: 2026-05-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### Mục tiêu tiêu điểm Tuần 5:
+
+* Thay đổi tư duy triển khai hệ thống thông thường sang mô hình điện toán phi máy chủ (Serverless).
+* Khởi tạo và liên kết các REST API bằng cách phối hợp Amazon API Gateway với AWS Lambda.
+* Nghiên cứu bài toán gỡ rối (decoupling) ứng dụng bằng SQS, SNS và học cách lưu dữ liệu bằng DynamoDB.
+
+### Bảng công việc chi tiết:
+| Ngày | Hạng mục thực hiện | Bắt đầu | Kết thúc | Nguồn bài giảng |
+| --- | --- | :---: | :---: | --- |
+| 29 | Đọc hiểu lý thuyết Serverless, phân tích ưu thế và nhận biết cách AWS Lambda lắng nghe sự kiện (Event-driven). | 15/05/2026 | 15/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 30 | Nắm bắt phương pháp xử lý hàng đợi tin nhắn (Message Queue) để tách rời các chu trình bằng Amazon SQS. | 16/05/2026 | 16/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 31 | Biên soạn mã nguồn cho hàm Lambda, cấu hình để hàm này tự kích hoạt và tiêu thụ Data lấy từ SQS. | 17/05/2026 | 17/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 32 | Rà soát kiến trúc luân chuyển sự kiện Pub/Sub, thấy được hiệu năng khuếch tán dữ liệu của hệ thống SNS. | 18/05/2026 | 18/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 33 | Học cách đánh chỉ mục NoSQL trên Amazon DynamoDB, vạch ra ranh giới giữa Partition Key và Sort Key. | 19/05/2026 | 19/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 34 | Lắp ráp luồng tương tác thực tế: Một Request chạm tới API Gateway, gọi Lambda và ghi nhận vào bảng DynamoDB. | 20/05/2026 | 20/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
+| 35 | Chạy thử nghiệm phản hồi của luồng API, fix bug các hàm và dọn sạch các template dư thừa ra khỏi tài khoản. | 21/05/2026 | 21/05/2026 | [FCAJ Playlist](https://www.youtube.com/playlist?list=PLahN4TLWtox2a3vElknwzU_urND8hLn1i) |
 
 
-### Mục tiêu tuần 5:
+### Đánh giá thành tựu:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Thích nghi tốt với thiết kế và triển khai mô hình Serverless không cần duy trì tài nguyên phần cứng liên tục.
+* Tự xây dựng được một chuỗi RESTful API hiện đại xuyên suốt từ Frontend tới Backend (API Gateway - Lambda - DynamoDB).
+* Phân bổ thiết kế hệ thống rời rạc, chống lỗi đứt quãng thông qua hàng đợi SQS và trung tâm thông báo SNS.

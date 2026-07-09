@@ -14,7 +14,11 @@ Trong phần này, chúng ta sẽ chuẩn bị các công cụ và tài nguyên 
 * Cần có một tài khoản AWS đang hoạt động.
 * Khuyến nghị chọn Region (Khu vực) là **ap-southeast-1 (Singapore)** để các dịch vụ hoạt động ổn định nhất trong phạm vi bài lab.
 
+![region](/images/5-Workshop/5.2-Prerequisite/region.jpg)
+
 **IAM user - workshop admin** có những policy sau:
+
+![iam-admin](/images/5-Workshop/5.2-Prerequisite/iam-permission.jpg)
 
 ```
 

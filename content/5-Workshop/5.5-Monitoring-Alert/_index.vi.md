@@ -15,7 +15,7 @@ Tất cả các dịch vụ (IoT Core, API Gateway, Lambda) đều được cấ
 * Mọi sự kiện từ lúc xe kết nối gửi MQTT, đến việc Lambda thực thi hàm kiểm tra nhiệt độ đều được lưu trữ dạng text.
 * Nhờ đó, người quản trị có thể dễ dàng truy vết (debug) khi có bản tin bị lỗi hoặc ứng dụng web không kết nối được tới cơ sở dữ liệu.
 
-![Cloudwatch](/images/5-Workshop/5.5-Monitoring-alert/send-telemetry.jpg)
+![Cloudwatch](../../images/5-Workshop/5.5-Monitoring-alert/send-telemetry.jpg)
 
 #### 2. CloudWatch Metrics & Alarms - Phát hiện bất thường
 Dự án không chỉ lưu log mà còn đo lường (Metrics).
@@ -27,4 +27,4 @@ Khi CloudWatch Alarm kích hoạt trạng thái báo động, hoặc khi thuật
 * **SNS Topic:** Một kênh giao tiếp (Topic) được tạo ra.
 * **Tự động gửi Email/SMS:** Email của người dùng/quản trị viên được đăng ký vào Topic này. Ngay khi có lỗi, Amazon SNS sẽ tự động phát tán một Email chứa nội dung khẩn cấp (ví dụ: "CẢNH BÁO: Động cơ xe vượt mức nhiệt an toàn") đến người dùng.
 
-![SNS](/images/5-Workshop/5.5-Monitoring-alert/sns.jpg)
+![SNS](../../images/5-Workshop/5.5-Monitoring-alert/sns.jpg)

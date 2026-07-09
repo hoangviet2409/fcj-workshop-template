@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Workshop Overview"
 date: 2026-07-09
 weight: 1
@@ -22,7 +22,7 @@ Through this workshop, you will gain hands-on experience building a complete **S
 
 #### 3. System Architecture
 
-![architect](/images/5-Workshop/5.1-Workshop-overview/architect.jpg)
+![architect](../../images/5-Workshop/5.1-Workshop-overview/architect.jpg)
 
 The project's architecture is designed using an **Event-Driven** and **Serverless** model. It is divided into two independent yet tightly integrated processing flows:
 
@@ -38,7 +38,7 @@ The project's architecture is designed using an **Event-Driven** and **Serverles
 
 * **Monitoring & Alerting System:**
   - All system activities are logged in **CloudWatch Logs** for easy debugging.
-  - When an anomaly is detected (e.g., engine temperature exceeds 105°C), a **CloudWatch Alarm** is instantly triggered, prompting **Amazon SNS** to send an emergency alert message to the vehicle owner's device.
+  - When an anomaly is detected (e.g., engine temperature exceeds 105�C), a **CloudWatch Alarm** is instantly triggered, prompting **Amazon SNS** to send an emergency alert message to the vehicle owner's device.
 
 In the upcoming sections, we will dive into the practical implementation of each component!
 

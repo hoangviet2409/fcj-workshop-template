@@ -15,7 +15,7 @@ All core services (IoT Core, API Gateway, Lambda) are configured to push executi
 * Every event, from a vehicle connecting and publishing an MQTT message to a Lambda function checking the temperature, is recorded.
 * This allows administrators to easily trace and debug errors if a message fails to process or the web application cannot reach the database.
 
-![Cloudwatch](/images/5-Workshop/5.5-Monitoring-alert/send-telemetry.jpg)
+![Cloudwatch](../../images/5-Workshop/5.5-Monitoring-alert/send-telemetry.jpg)
 
 
 #### 2. CloudWatch Metrics & Alarms - Anomaly Detection
@@ -28,4 +28,4 @@ When a CloudWatch Alarm is triggered, or when the Lambda algorithm detects that 
 * **SNS Topic:** A communication channel (Topic) named `VehicleAlerts` is established.
 * **Automated Email/SMS:** User or administrator email addresses are Subscribed to this Topic. Upon an error, Amazon SNS automatically broadcasts an emergency email (e.g., "WARNING: Engine temperature exceeds safety limits") to the user.
 
-![SNS](/images/5-Workshop/5.5-Monitoring-alert/sns.jpg)
+![SNS](../../images/5-Workshop/5.5-Monitoring-alert/sns.jpg)

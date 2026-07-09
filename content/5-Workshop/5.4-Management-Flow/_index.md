@@ -14,7 +14,7 @@ pre: " <b> 5.4 </b> "
 * Set up additional attributes if needed (e.g., `timestamp` as a Sort Key to retrieve historical data over time).
 * Choose On-demand capacity mode to save costs during the workshop.
 
-![table](/images/5-Workshop/5.4-Management-flow/table.jpg)
+![table](../../images/5-Workshop/5.4-Management-flow/table.jpg)
 
 #### 2. Create REST API with API Gateway
 * Navigate to Amazon API Gateway and create a new **REST API** (or HTTP API depending on the architecture).
@@ -23,7 +23,7 @@ pre: " <b> 5.4 </b> "
   - Add a `GET` method to query detailed vehicle information.
 * Enable **CORS** (Cross-Origin Resource Sharing) so the Frontend can call the API without browser block errors.
 
-![API](/images/5-Workshop/5.4-Management-flow/API.jpg)
+![API](../../images/5-Workshop/5.4-Management-flow/API.jpg)
 
 #### 3. Connect API to Lambda (Integration)
 * Create a new **AWS Lambda function** that will handle the API logic.
@@ -31,4 +31,4 @@ pre: " <b> 5.4 </b> "
 * Grant this Lambda the appropriate IAM Policy to allow read (`dynamodb:GetItem`, `dynamodb:Query`) and write (`dynamodb:PutItem`) operations to the DynamoDB table.
 * Deploy the API to a Stage (e.g., `dev` or `prod`) and save the **Invoke URL** to configure the Frontend.
 
-![API](/images/5-Workshop/5.4-Management-flow/Lambda-api.jpg)
+![API](../../images/5-Workshop/5.4-Management-flow/Lambda-api.jpg)

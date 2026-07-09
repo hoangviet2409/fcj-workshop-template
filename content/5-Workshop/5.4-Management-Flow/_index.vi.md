@@ -14,7 +14,7 @@ pre: " <b> 5.4 </b> "
 * Thiết lập các thuộc tính bổ sung nếu cần (ví dụ như `timestamp` làm Sort Key để lấy lịch sử theo thời gian).
 * Lựa chọn chế độ tính phí (Capacity mode) là On-demand để tiết kiệm chi phí cho bài thực hành.
 
-![table](/images/5-Workshop/5.4-Management-flow/table.jpg)
+![table](../../images/5-Workshop/5.4-Management-flow/table.jpg)
 
 
 #### 2. Tạo REST API với API Gateway
@@ -24,7 +24,7 @@ pre: " <b> 5.4 </b> "
   - Thêm phương thức `GET` để nhận request từ phía người dùng (Frontend) và truy vấn thông tin chi tiết của xe.
 * Bật tính năng **CORS** (Cross-Origin Resource Sharing) để Frontend có thể gọi API mà không bị lỗi trình duyệt chặn.
 
-![API](/images/5-Workshop/5.4-Management-flow/API.jpg)
+![API](../../images/5-Workshop/5.4-Management-flow/API.jpg)
 
 
 #### 3. Kết nối API với Lambda (Integration)
@@ -33,5 +33,5 @@ pre: " <b> 5.4 </b> "
 * Cấp quyền (IAM Policy) cho Lambda này được phép thực hiện các thao tác đọc (`dynamodb:GetItem`, `dynamodb:Query`) và ghi (`dynamodb:PutItem`) vào bảng DynamoDB.
 * Triển khai (Deploy) API lên một Stage (ví dụ: `dev` hoặc `prod`) và lưu lại **Invoke URL** để cấu hình cho Frontend.
 
-![API](/images/5-Workshop/5.4-Management-flow/Lambda-api.jpg)
+![API](../../images/5-Workshop/5.4-Management-flow/Lambda-api.jpg)
 
